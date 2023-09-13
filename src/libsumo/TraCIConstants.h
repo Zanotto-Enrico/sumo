@@ -1095,7 +1095,7 @@ TRACI_CONST int VAR_MAXSPEED_LAT = 0xba;
 // get/set minimum lateral gap (vehicle, vtypes)
 TRACI_CONST int VAR_MINGAP_LAT = 0xbb;
 
-// get/set vehicle height (vehicle, vtypes, poi)
+// get/set vehicle height (vehicle, vtypes, poi, polygons)
 TRACI_CONST int VAR_HEIGHT = 0xbc;
 
 // get/set vehicle line

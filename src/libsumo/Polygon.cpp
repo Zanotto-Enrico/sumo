@@ -82,6 +82,11 @@ Polygon::getLineWidth(const std::string& polygonID) {
     return getPolygon(polygonID)->getLineWidth();
 }
 
+double
+Polygon::getLayer(const std::string& polygonID) {
+    return getPolygon(polygonID)->getShapeLayer();
+}
+
 TraCIColor
 Polygon::getColor(const std::string& polygonID) {
     SUMOPolygon* p = getPolygon(polygonID);
@@ -312,6 +317,8 @@ Polygon::handleVariable(const std::string& objID, const int variable, VariableWr
             return wrapper->wrapDouble(objID, variable, getLineWidth(objID));
         case VAR_SHAPE:
             return wrapper->wrapPositionVector(objID, variable, getShape(objID));
+        case VAR_HEIGHT:
+            return wrapper->wrapDouble(objID, variable, getLayer(objID));
         case libsumo::VAR_PARAMETER:
             paramData->readUnsignedByte();
             return wrapper->wrapString(objID, variable, getParameter(objID, paramData->readString()));

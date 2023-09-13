@@ -46,6 +46,7 @@ public:
     static libsumo::TraCIColor getColor(const std::string& polygonID);
     static bool getFilled(const std::string& polygonID);
     static double getLineWidth(const std::string& polygonID);
+    static double getLayer(const std::string& polygonID);
 
     LIBSUMO_ID_PARAMETER_API
     LIBSUMO_SUBSCRIPTION_API
